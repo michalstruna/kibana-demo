@@ -1,0 +1,16 @@
+curl -X PUT -H "Content-Type: application/json" -d '{
+  "mappings": {
+    "properties": {
+      "id": { "type": "integer" },
+      "@timestamp": { "type": "date" },
+      "type": { "type": "keyword" },
+      "time": { "type": "long" },
+      "value": { "type": "double" },
+      "location": { "type": "geo_point" },
+      "user": { "type": "keyword" },
+      "device": { "type": "keyword" },
+      "sensor": { "type": "keyword" },
+      "altitude": { "type": "double" }
+    }
+  }
+}' localhost:9200/logstashmysql

@@ -1,0 +1,7 @@
+# Script for delete all documents in elasticsearch.
+
+curl -X POST localhost:9200/logstashmysql/_delete_by_query?conflicts=proceed -H 'Content-Type: application/json' -d '{
+ "query": {
+ "match_all": {}
+ }
+}'
